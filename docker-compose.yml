@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  node:
+    container_name: iot-node
+    build:
+      context: .
+      dockerfile: node.dockerfile
+    tty: true
+    privileged: true
+    volumes:
+      - ./code:/app
